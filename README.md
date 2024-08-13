@@ -25,7 +25,7 @@ and other related information. It includes functionality for adding and storing 
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/thankgodandrew1/product-page-template.git](https://github.com/thankgodandrew1/product-page-template)
+   git clone https://github.com/thankgodandrew1/product-page-template.git
    ```
 
 2. Navigate to the project directory:
