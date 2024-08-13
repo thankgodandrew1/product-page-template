@@ -30,7 +30,7 @@ and other related information. It includes functionality for adding and storing 
 
 2. Navigate to the project directory:
    ```bash
-   cd product-page-template
+   cd product-page
    ```
 
 3. Open `index.html` in your preferred web browser to view the product page.
@@ -44,7 +44,7 @@ and other related information. It includes functionality for adding and storing 
 ## Demo
 
 For a live demo of the product page template, please refer to the following software demo video:
-- [Demo Video 1](https://)
+- [Software Demo Video](https://)
 
 ## Contributing
 
