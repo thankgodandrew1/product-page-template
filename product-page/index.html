@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta name="robots" content="index, follow" >
+    <title>Handcrafted Sci-Fi Items | Nebula Nook</title>
+    <meta
+      name="description"
+      content="Explore handcrafted sci-fi items at Nebula Nook. Shop unique, high-quality products inspired by the cosmos."
+    >
+    <meta
+      name="keywords"
+      content="handcrafted sci-fi items, space-themed products, unique space gifts, fantasy crafts, steampunk crafts, Nebula Nook"
+    >
+    <link
+      rel="canonical"
+      href="https://thankgodandrew1.github.io/index.html/"
+    >
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <!-- <video class="background-video" autoplay loop muted>
+      <source src="videos/galactic.mp4" type="video/mp4">
+        </video> -->
+    <header>
+      <div class="container">
+        <!-- <button class="hamburger" aria-label="Toggle Navigation Menu">☰</button> -->
+        <div class="logo">
+          <a class="logo-a" href="#">☽ NEBULA NOOK ☾</a>
+        </div>
+        <nav class="nav-menu">
+          <!-- <a class="hide-on-mobile" href="#">Home</a>
+          <a class="hide-on-mobile" href="#">Products</a>
+          <a class="hide-on-mobile" href="#">Sell</a>
+          <a class="hide-on-mobile" href="#">Reviews and Ratings</a> -->
+          <a href="#" class="cart-icon" aria-label="View Cart"
+            >🛒<span class="cart-count" style="display: none">0</span></a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <div class="tagline">
+      <span class="emoji">🚀</span> We Sell Handcrafted Sci-Fi Items
+      <span class="emoji">👾</span>
+    </div>
+    <main>
+      <div class="container">
+        <div class="notification">Product added to cart successfully!</div>
+        <section class="product-page">
+          <div class="product-images">
+            <div class="main-image-container">
+              <img src="images/LED_keychain.webp" alt="Product Image" class="main-image" >
+              <div class="floating-circles">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+              </div>
+            </div>
+            <div class="carousel">
+              <button class="carousel-button prev" aria-label="Previous Image">
+                ‹
+              </button>
+              <div class="thumbnails"></div>
+              <button class="carousel-button next" aria-label="Next Image">
+                ›
+              </button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h1>Product Title</h1>
+            <p class="price">$00.00</p>
+            <div class="rating">⭐⭐⭐⭐⭐ (0 reviews)</div>
+            <p class="description">
+              Short description of the product goes here. (THIS IS JUST A
+              PLACEHOLDER)
+            </p>
+            <div class="options">
+              <label for="size">Size:</label>
+              <select id="size" aria-label="Select Size"></select>
+              <label for="color">Color:</label>
+              <select id="color" aria-label="Select Color"></select>
+            </div>
+            <div class="quantity">
+              <label for="quantity">Quantity:</label>
+              <input
+                type="number"
+                id="quantity"
+                value="1"
+                aria-label="Quantity"
+              >
+            </div>
+            <button class="add-to-cart" aria-label="Add to Cart">
+              Add to Cart
+            </button>
+            <button class="wishlist" aria-label="Add to Wishlist">
+              Add to Wishlist
+            </button>
+          </div>
+        </section>
+        <section class="product-details">
+          <h2>Product Description</h2>
+          <p>JSON will popuputalet detailed description of the product here.</p>
+          <h2>Specifications</h2>
+          <p>Material, dimensions, bla bla bla e.t.c.</p>
+          <h2>Additional Information</h2>
+          <p>Shipping time, etc.</p>
+        </section>
+        <section class="reviews">
+          <h2>Customer Reviews</h2>
+          <div class="review-summary"></div>
+          <div class="review-list"></div>
+        </section>
+        <section class="related-products">
+          <h2 class="recommended-pro">Recommended Products</h2>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer-links">
+          <div class="">
+            <p class="fair-use">
+              Skep Foundation Pre-Internship | ThankGod Andrew
+            </p>
+            <a
+              class="wireframes"
+              href="/wireframes.html"
+              aria-label="View Nebula Nook Wireframes"
+              target="_blank"
+              >Wireframes</a
+            > 
+            <br>
+            <a
+              class="wireframes"
+              href="https://yutube.com"
+              aria-label="View Nebula Nook Wireframes"
+              target="_blank"
+              >Software Demo Video</a
+            >
+          </div>
+          <!-- <div class="company-info">
+            <a
+              href="/attributions"
+              aria-label="View Attributions for Nebula Nook"
+              >Attributions</a
+            >
+          </div> -->
+        </div>
+        <hr>
+        <p class="fair-use">
+          Images are believed to be "Fair Use". Notify the author
+          <span class="email"
+            ><a href="mailto:thankgodandrew663@gmail.com"
+              >@thankgodandrew663@gmail.com</a
+            ></span
+          >
+          if not and they will be removed.
+        </p>
+      </div>
+    </footer>
+
+    <!-- cart modal -->
+    <div class="cart-modal">
+      <div class="cart-content">
+        <button class="close-cart-modal" aria-label="Close Cart Modal">
+          ✖
+        </button>
+        <h2>My Cart</h2>
+        <div class="cart-items"></div>
+        <!-- <hr> -->
+        <div class="cart-total">Total: $0.00</div>
+        <button class="checkout" aria-label="Proceed to Checkout">
+          Checkout
+        </button>
+        <!-- <button class="close-modal">Close</button> -->
+      </div>
+    </div>
+    <!-- <script src="js/hamburgerBtn.js"></script> -->
+    <!-- <script src="js/carousel.js"></script> -->
+    <script src="js/productPage.js" defer></script>
+    <script src="js/reviews.js"></script>
+    <script src="js/cart.js"></script>
+  </body>
+</html>
