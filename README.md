@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains a product page template built using HTML, CSS, JavaScript, and jQuery. This frontend product page template is designed to showcase product details, including reviews, ratings, 
+This repository contains a product page template built using HTML, CSS, JavaScript, and jQuery. This project is a Pre-Internship project at Skep Foundation. This frontend product page template is designed to showcase product details, including reviews, ratings, 
 and other related information. It includes functionality for adding and storing reviews, updating review counts, and maintaining user comments even after a page refresh.
 
 ## Features
@@ -44,7 +44,8 @@ and other related information. It includes functionality for adding and storing 
 ## Demo
 
 For a live demo of the product page template, please refer to the following software demo video:
-- [Software Demo Video](https://)
+- [Software Demo Video (UI Walkthrough)](https://youtu.be/3dcWpLO0G1I))
+- [Software Demo Video (Code Walkthrough)](https://https://youtu.be/YrNgftTymoc)
 
 ## Contributing
 
