@@ -547,11 +547,11 @@ footer {
 footer .footer-links {
   display: flex;
   justify-content: space-around;
-  gap: 20px;
+  /* gap: 20px; */
 }
 
 footer .footer-links > div {
-  width: 22%;
+  /* width: 18%; */
   text-align: center;
 }
 
@@ -579,7 +579,7 @@ footer .footer-links .social-media i {
   color: #00e6b8;
 }
 .wireframes {
-  text-decoration: none;
+  /* text-decoration: none; */
   font-weight: bold;
 }
 
