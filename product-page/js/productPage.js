@@ -1,13 +1,13 @@
 $(document).ready(async function () {
   //   i stored 3 products in a json file and pushed to GitHub pages
-  //   this line fetches product data from the URL
+  //   this line gets products data from the URL
   const response = await fetch(
     'https://thankgodandrew1.github.io/products-json/products/products.json'
   );
   const data = await response.json();
   const products = data.products;
 
-  // 3 products in the json this line would randomomly fetch product from the product list
+  // 3 products in the json this line would randomomly fetch a product from the product list
   const randomProduct = products[Math.floor(Math.random() * products.length)];
 
   //   stores the randomly selected product's ID to the productID variable for future use
@@ -21,11 +21,6 @@ $(document).ready(async function () {
   //   same with the product title and price of the randomly selected product
   $('.product-info h1').text(randomProduct.title);
   $('.product-info .price').text(`$${randomProduct.price}`);
-
-  // fetch and initialize reviews for the randomly selected product
-  $.getScript('js/reviews.js', function () {
-    window.initializeReviews(productID);
-  });
 
   // dom manipulation for the product description
   $('.product-info .description').text(randomProduct.description);
@@ -129,6 +124,11 @@ $(document).ready(async function () {
     if (window.showNotification) window.showNotification();
   });
 
+    // fetch and initialize reviews for the randomly selected product
+    $.getScript('js/reviews.js', function () {
+      window.initializeReviews(productID);
+    });
+  
   // imports carousel functionality for the product;s thumbnails
   $.getScript('js/carousel.js');
 });
