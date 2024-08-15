@@ -49,8 +49,7 @@ For a live demo of the product page template, please refer to the following soft
 
 ## Contributing
 
-If you'd like to contribute to this project, please fork the repository and create a pull request with your changes. Make sure to follow the project's coding guidelines and 
-include relevant tests.
+If you'd like to contribute to this project, please fork the repository and create a pull request with your changes
 
 ## License
 
