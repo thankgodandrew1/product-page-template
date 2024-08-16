@@ -15,7 +15,7 @@ $(document).ready(async function () {
 
   // this ine updates the main product image and its alternative text with the one from the JSON file using JQuery
   $('.main-image')
-    .attr('src', randomProduct.images.main)
+    .attr('data-src', randomProduct.images.main)
     .attr('alt', randomProduct.title);
 
   //   same with the product title and price of the randomly selected product
@@ -29,7 +29,12 @@ $(document).ready(async function () {
   const thumbnailsContainer = $('.thumbnails');
   thumbnailsContainer.empty();
   $.each(randomProduct.images.thumbnails, function (index, thumbnail) {
-    const img = $('<img>').attr('src', thumbnail).attr('alt', 'Thumbnail');
+    const img = $('<img>')
+      .attr('src', 'images/nebula-placeholder.webp')
+      .attr('data-src', thumbnail)
+      .attr('alt', 'Thumbnail')
+      .addClass('lazy')
+      .attr('loading', 'lazy');
     thumbnailsContainer.append(img);
   });
 
@@ -81,7 +86,7 @@ $(document).ready(async function () {
   const productGrid = relatedProductsContainer.find('.product-grid');
   $.each(randomProduct.recommendedProducts, function (index, product) {
     const div = $('<div>').addClass('product').html(`
-        <img src='${product.image}' alt='${product.title}'>
+        <img src='images/nebula-placeholder.webp' loading='lazy' class='lazy' data-src='${product.image}' alt='${product.title}'>
         <p>${product.title}</p>
         <p>$${product.price}</p>
         <button class='add-to-cart'>Add to Cart</button>
@@ -124,11 +129,44 @@ $(document).ready(async function () {
     if (window.showNotification) window.showNotification();
   });
 
-    // fetch and initialize reviews for the randomly selected product
-    $.getScript('js/reviews.js', function () {
-      window.initializeReviews(productID);
+  // this basically would get rid of the placeholder image if 30 percent of the image is visible on viewport
+  const observerOptions = {
+    // root: null,
+    threshold: 0.3, // 30 percent of d img
+    rootMargin: '0px',
+  };
+
+  const observer = new IntersectionObserver((items, observer) => {
+    items.forEach((item) => {
+      if (item.isIntersecting) {
+        const img = $(item.target);
+        const src = img.attr('data-src');
+        if (src) {
+          img.attr('src', src).removeAttr('data-src');
+        }
+        observer.unobserve(item.target); // unobserve once the image is loaded
+      }
     });
-  
+  }, observerOptions);
+
+  // added observer to main image
+  observer.observe(document.querySelector('.main-image'));
+
+  // same with thumbnails
+  $('.thumbnails img').each(function () {
+    observer.observe(this);
+  });
+
+  // same witht he recommended options grid section
+  $('.product img').each(function () {
+    observer.observe(this);
+  });
+
+  // fetch and initialize reviews for the randomly selected product
+  $.getScript('js/reviews.js', function () {
+    window.initializeReviews(productID);
+  });
+
   // imports carousel functionality for the product;s thumbnails
   $.getScript('js/carousel.js');
 });
