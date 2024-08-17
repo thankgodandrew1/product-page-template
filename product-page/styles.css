@@ -407,11 +407,14 @@ main {
 }
 .close-modal {
   background: #f44;
-  color: white;
+  /* color: white; */
   border: none;
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
+  font-family: 'Orbitron', sans-serif;
+  margin-top: 8px;
+  font-weight: bolder;
 }
 .cart-content img {
   max-width: 100px;

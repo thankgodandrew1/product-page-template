@@ -116,7 +116,7 @@ $(document).ready(function () {
   });
 
   // event handler for closing the cart modal
-  $('.close-cart-modal').on('click', function () {
+  $('.close-cart-modal, .close-modal').on('click', function () {
     $('.cart-modal').fadeOut(); // hides the cart modal fade out animation adde
   });
 
