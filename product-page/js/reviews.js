@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  let currentProductID; // this variable holds the ID of the currently viewed product, this enables reviews of a particular product not show up in others 
+  let currentProductID; // this variable holds the ID of the currently viewed product, this enables reviews of a particular product not show up in others
 
   // initializes reviews for the given productID
   window.initializeReviews = function (productID) {
@@ -17,7 +17,16 @@ $(document).ready(function () {
       $('.reviews').append(`
           <div class='review-form'>
             <input type='text' id='name' placeholder='Your Name' required><br>
-            <input type='number' id='rating' min='1' max='5' placeholder='Rating (1-5)' required><br>
+            <div class="custom-select-wrapper">
+              <select id="rating" required>
+                <option value="">Rating (1-5)</option>
+                <option value="1">1 Star</option>
+                <option value="2">2 Stars</option>
+                <option value="3">3 Stars</option>
+                <option value="4">4 Stars</option>
+                <option value="5">5 Stars</option>
+              </select>
+            </div>
             <textarea id='comment' placeholder='Your Review' required></textarea><br>
             <button class='submit-review'>Submit Review</button>
           </div>

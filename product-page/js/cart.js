@@ -3,8 +3,8 @@ $(document).ready(function () {
   function updateCartIcon() {
     // retrieve the cart from localStorage, or initialize cart as an empty array if the cart is noto found
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    // get the total number of items in the cart
-    const itemCount = cart.length;
+    // Calculate the total quantity of all items in the cart
+    const itemCount = cart.reduce((total, item) => total + item.quantity, 0);
 
     // this coe lines would update the cart icon's item count display
     if (itemCount > 0) {
