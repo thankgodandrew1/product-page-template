@@ -39,7 +39,7 @@ $(document).ready(function () {
           </p>
           <button title='Remove from cart' class="remove-from-cart" data-id="${
             item.id
-          }">❌</button>
+          }">Remove</button>
           <hr>
         </div>
       `);
